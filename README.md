@@ -481,5 +481,47 @@ To calculate flop ratio
  </details><details>
  <summary> Cell design and characterization flows
  </summary>
+  
+  ##  Inputs for cell design flow
+   > Standard cells are placed in library
+   > one of the section stores all the stanadard cells
+   > Library consists different cells of functionalaity, Vt ,size
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/5f89ad19-bcee-4fd9-895d-02fd4496800d)
 
+   > for example the IC design flow for inverters, is represented in the form of shape,timinng behaviour, power charcteristic and so on..
+   > IC  design flow consists of inputs, design steps and outputs
+   > Further inputs have PDK's
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/65c77a4b-2825-4fa3-a7ab-774a70e82dc8)
 
+  ## Circuit design steps
+  > Here in the first step user design specifications are provided such as cell height,supply vltage,metal layer,pin location and so on.
+  > In the design steps circuit design,layout design and characertization is present
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/f0d57c35-1f87-489c-af1a-15428f1002e8)
+  > In circuit design circuit is designed with user specifications
+## Layout design steps
+ > In layout specification we design the logic using PMOS and NMOS and then find the 
+    Euler's path for both nmos network and pmos network
+ > Based on Eulers path we draw sstick diagram.
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/85140afc-2282-4261-a356-5935a7b42622)
+ > The output of layout design will be GDSII, LEF(defines width and height of cell),extracted spice netlist (provides information of parasatic 
+   capacitances and resistances)
+>Characterization provides Timing,noise and power information
+
+## Typical characterization flow
++ The characterization flow is as follows:-
+  
+ > Read in the model
+ > Read the brhaviour of buffer
+ > Recognize the behaviour of buffer
+ > Read subcircuits of inveter
+ > Attach necessary power source
+ > Apply stimmulus
+ > Provide necessary output capacitances
+ > Provide necessary simulation command
+
++ The characterization flow is made into a configuration file to the characterization software called 'GUNA'
++ GUNA generates timing, noise, timing,power
++ Characterization is divided into
+   > Timing characterization
+   > Power characterization
+   > Noise characterization 
