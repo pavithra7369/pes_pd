@@ -64,12 +64,13 @@ Good floorplan vs bad floorplan and introduction to library cells
  Design library cell using Magic Layout and ngspice characterization
 
   + Labs for CMOS inverter ngspice simulations
-        + placer revision
-        + SPICE deck creation for CMOS inverter
-        + SPICE simulation lab for CMOS inverter
-        + Switching Threshold Vm
-        + Static and dynamic simulation of CMOS inverter
-        + Lab steps to git clone vsdstdcelldesign
+    
+     + placer revision
+     + SPICE deck creation for CMOS inverter
+     + SPICE simulation lab for CMOS inverter
+     + Switching Threshold Vm
+     + Static and dynamic simulation of CMOS inverter
+     + Lab steps to git clone vsdstdcelldesign
      
 + Inception of Layout A CMOS fabrication process
   
