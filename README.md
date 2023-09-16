@@ -429,4 +429,57 @@ To calculate flop ratio
 + Logical cell placement blockage
   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/ae193a2c-09a1-4191-a469-a03f2308f1d5)
   > Now floorplan is ready forr placement and routing step
+
+  ## Steps to run FLoorplan using OpenLANE
+  After synnthesis, open terminal and run floorplan
+  > cd floorplan
+  ![WhatsApp Image 2023-09-16 at 13 35 35](https://github.com/pavithra7369/pes_pd/assets/143084423/b93e0714-5bdd-414b-9b05-4f9ae317c04e)
   
+  ![WhatsApp Image 2023-09-16 at 13 39 53](https://github.com/pavithra7369/pes_pd/assets/143084423/6eadd80b-2848-4d29-8c8e-8e9325ef7cf1)
+  
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/498e7194-861d-45e5-8e51-2ff7742aa211)
+
+ </details><details>
+  <summary>Library Binding and Placement </summary>
+
+ +  Placement and routing
+    1) bind netlist withphysical cells
+     > shape of the gates represent the functionality of the gates, inreality all gthe gates are represented as boxes
+     > each components are given proper shape
+     > library has all the  height,width,delay informations of a particular cell and the required conditions of the cell,libraries can be further divided 
+      by shape/size and delay information.
+     > Libraries also contain various flavour of a particular cell
+   2) Placement
+     > ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e73abb22-8e4d-425e-b4ac-9595773c60f7)
+     > Pre placed cells are not to be affected and no cells should be placed in that area.
+     > In the above picture we see that the FF1 and FF2 are pplaced accordingly, this causes huge length
+  3) Optimize placement
+     >  here we will estimate the capacitances, and wire length based on insert repearters
+        ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/6401b75f-6a2b-405e-b6a5-e07afdf62e49)
+     > We have to maintain signal integrity, so we use repeators,which are buffers that will re-condition the  original signals make a new signal and 
+      replicates the original signal.
+     > There is loss of area despite maintainng signal integrity
+     > Signal integrity needs to be maintained in all the cells
+     > The distance between each cell is calculated by slew/ transition
+     ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d5080495-b715-42de-92de-718afb6df1d2)
+     > Logic is optimized based on placement conditions
+ 4) STA (static timing analysis
+      
++  Library characterization and modelling
+  Libraries provide standardized building blocks that enhance design productivity and reusability, while characterization provides the essential data 
+  needed to accurately model and simulate the behavior of these components, ensuring that the final design meets its performance, power, and reliability 
+  goals.
+
++ Congestion aware placement using RePlAce
+   > Placement is of 2 tyoes detailed placement and global placement
+   ![WhatsApp Image 2023-09-16 at 14 46 07](https://github.com/pavithra7369/pes_pd/assets/143084423/6363b009-3d30-46a2-a3ad-e9214e838f55)
+   ![WhatsApp Image 2023-09-16 at 14 47 23](https://github.com/pavithra7369/pes_pd/assets/143084423/bd7f5dea-5380-45df-9beb-91a6509d32fd)
+   ![WhatsApp Image 2023-09-16 at 14 47 45](https://github.com/pavithra7369/pes_pd/assets/143084423/448568a8-e305-4d3f-87c3-1b14854c956f)
+  > on further zooming
+   ![WhatsApp Image 2023-09-16 at 14 48 21](https://github.com/pavithra7369/pes_pd/assets/143084423/6d8a15d9-ca9b-40c9-8fa4-82376c049d13)
+
+ </details><details>
+ <summary> Cell design and characterization flows
+ </summary>
+
+
