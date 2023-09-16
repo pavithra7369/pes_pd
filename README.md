@@ -153,13 +153,12 @@ Good floorplan vs bad floorplan and introduction to library cells
     + TritonRoute method to handle connectivity
     + Routing topology algorithm and final files list post-route
 
-# DAY 1
+# DAY 1  Inception of open-source EDA, OpenLANE and Sky130 PDK
 
-   </details>     
-      <details> 
-          <summary>   Inception of open-source EDA, OpenLANE and Sky130 PDK    </summary>
+</details><details>
+<summary> How to talk to computers </summary>
+ 
 
-## How to talk to computers
 Introduction to QFN-48 package,Chips,Pads,Core,Die,and IP's
 
 Here we are taking aurdino board, we are discussing about the circled chip in the below picture
@@ -177,7 +176,7 @@ Here we are taking aurdino board, we are discussing about the circled chip in th
 
 > core -> Core of chip is where digital logic placed
 
-> Die ->A die is a small block of semiconducting material on which a given functional circuit is fabricated.
+> Die -> A die is a small block of semiconducting material on which a given functional circuit is fabricated.
 
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/8797d493-9a38-4ded-ad16-867492954c9a)
 
@@ -214,7 +213,9 @@ How does different apps run on the chip?
     into netlist,and from this Synthesized Netlist to hardware is Physical design implementation of the Netlist. 
   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/6da1b319-be71-44c1-b37a-f71b14571a56)
 
-## SoC design and OpenLANE
+</details> <details>
+ 
+<summary> SoC design and OpenLANE </summary>
 + Introduction to all components of open source digital aasic design
  >  Application specific integrated circuit requires RTL designs,EDA tools and PDK data.
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/db56038a-ec73-4da6-84fc-f8f4123dde72)
@@ -272,7 +273,7 @@ How does different apps run on the chip?
      + Timing verification includes static timing analysis(STA0)
 
 
-  ## Intoduction to openLANE and Strives chipsets
+## Intoduction to openLANE and Strives chipsets
   + What is openLANE?
    OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen and custom methodology scripts for 
    design exploration and optimization.
@@ -315,13 +316,116 @@ How does different apps run on the chip?
    + Physical verification DRC & LVS
      ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/87d7eb75-aad0-449b-90d5-003b93e70d0d)
 
-## Get familiar to Open-source EDA tools
+</details> <details>
+<summary>
+ Get familiar to Open-source EDA tools
+</summary>
+ 
+## OpenLANE Directory structure in detail
+> openLANE is actually a flow that contains several EDA tools.
+> cd->change directory
+> ls->listing
+> ltr->order
+> la---help ->to know about a command
++ The PDK varient used here is skywater130nm
++ skywater130nm has two subdirectories
+     + libs.ref (process specific)
+     + libs.tech (specific to tool)
++ fd-> foundry name
++ sc->standard cell
++ hd->high density
+  
+  ![WhatsApp Image 2023-09-16 at 08 18 03](https://github.com/pavithra7369/pes_pd/assets/143084423/7e07ef89-7d10-48a0-a42b-52790e880cf6)
+  
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/fc807a12-3a37-49a3-84ef-6422049c16db)
 
+## Design Preparation Step
 
++ Go to terminal
+  
+  > cd/desktop/works/tools/openlane_workshop__dir/openlane
+  
+  > docker
+  
+  > ./flow.tcl -interactive
+  
+  > package require openlane 0.9
+  
 
-           
-# DAY 2
+![WhatsApp Image 2023-09-16 at 07 46 40](https://github.com/pavithra7369/pes_pd/assets/143084423/69cd4647-e7ca-4550-ab4d-745b420c16be)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d73bb692-c00b-4352-9d28-c41d25d1eb51)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/a0af3f22-ef6b-40fe-841a-93436622167e)
+
+## Review files after design and run synthesis
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/97856699-ff57-49b7-b55c-4f70e39670ae)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/84c5f0c6-1fd9-4c5a-b44c-c2505007757b)
+
+To calculate flop ratio
+![WhatsApp Image 2023-09-16 at 08 49 39](https://github.com/pavithra7369/pes_pd/assets/143084423/b8d3a8a0-65be-4cca-a547-02cdc932ec83)
+![WhatsApp Image 2023-09-16 at 08 49 50](https://github.com/pavithra7369/pes_pd/assets/143084423/578b7c4d-adb0-4395-9904-6dd2317b1f6b)
++ Divide 1634 by 17323
++ 17323 is the Number of cells
++ (1634/17323) ->0.094 This is the flop ratio 
 
  </details><details>
-<summary> Good floorplan vs bad floorplan and introduction to library cells </summary>
+<summary>  DAY 2 Good floorplan vs bad floorplan and introduction to library cells </summary>
 
+ </details><details>
+<summary> Chip Floor planning considerations </summary>
+  
+  ## Utilization factor and aspect ratio
+    
+   + Define Width and height of core and die
+     
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/8262b5ed-03e8-430b-89ce-6fdd6afc0a9a)
+ > Dimensions of chip depend on dimensions of logic gates and flip flops
+ > Convert the symbols into physical dimension
+ > A core is the section of the chip where the fundamental logic of design is pplaced
+ > Die is a small semiconductor material speciment on which the fundamental circuit is fabricated.
+ > Place all the logical cells inside the core, in this case the logical cells occupies the complete areea of core, so, 100% utilization
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d090f55b-7c7f-4487-829c-b40b07bcd14e)
+> When utilization factor is 1, means that the core is completely occupied and we cannot add any more cells in the logic
+> If utilization factor is not equal to "1" then we can add additional cells
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/880ead6f-e749-4fab-b821-9836895f5c67)
+> Aspect ratio is 1 for a sqaure chip,and for a rectangular hcip aspect tatio can be in decimal value.
+
+  + Define locations of preplaced cells
+    ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/6b28ea4e-068b-44ac-855f-d23a703ced3f)
+> In preplaced cells we can divide the logic gates into two blocks
+> Both the blocks arre impplemented separately,by extending IO pins and then black box the blocks
+> separate the black bosex as 2 different modules
+> Advantage of this process is , if part of logic is used multiple times on a network,we need not implement multipple times, we can just black box 
+ them,now these blocks can be connected multiple times into the netlist and can be used whenever required
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/bfa748c5-7031-4afe-80e7-dec6a4b8d6f1)
+
+> These IP's/blocks have user-defined locations and hence are placed in chip before automated placement-and-routing and are called pre placed cells.
+> The llocaations of pre placed cells are not touched when we go on with the design cycle, so once the pre-placed cells are placed their locations can't 
+ be moved in the completely design cycle,so locations of pre placed cells are should be very well defined
+> Piece of macros that is used multiple times (we can implement memories once, then they are reused multiple times,so we need not implement in each and 
+ every time)
+  
+   + De-coupling capacitors
+     > we use decoupling capacitors,they are huge capacitors completely dilled with charge, when there is switching aactivity,decoupling  capacitors loses 
+      some charge
+     > It's decoupled from the main circuit
+       ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/2cfa7676-e3bb-4338-b5cf-4f26ac140f64)
+     > This block will not miss any switching activity and cross talk
+
+
+  + Power planning
+    > Power planning during the Floorplanning phase is essential to lower noise in digital circuits attributed to voltage droop and ground bounce.
+    > When a transition occurs on a net, charge associated with coupling capacitors may be dumped to ground. If there are not enough ground taps charge 
+      will accumulate at the tap and the ground line will act like a large resistor, raising the ground voltage and lowering our noise margin.
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/19b83ea7-1d76-4ee6-b03e-71e5aa0535db)
+
+ + Pin Placement
+     > After power planning the next step is pin placement, Input and Output pins are provided
+     ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/40e84154-703b-4ed5-ba78-227b49559ea9)
+
++ Logical cell placement blockage
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/ae193a2c-09a1-4191-a469-a03f2308f1d5)
+  > Now floorplan is ready forr placement and routing step
+  
