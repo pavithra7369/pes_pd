@@ -726,5 +726,5 @@ Commands to open magic
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/6d9a886e-d943-421b-89c0-9fd47dd77101)
 
 </details><details>
-<summary>DAY-3
-Design library cell using Magic Layout and ngspice characterization </summary>
+<summary>DAY-4
+Pre-layout timing analysis and importance of good clock tree</summary>
