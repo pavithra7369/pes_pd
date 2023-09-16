@@ -525,3 +525,104 @@ To calculate flop ratio
    > Timing characterization
    > Power characterization
    > Noise characterization 
+
+</details> <details>
+<summary> General timing characterization parameters</summary>
+
+ ## General timing characterization parameters
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/90bad427-7ed1-450f-8ed7-d70abfcabd04)
+
+## Propagation Delay and Transition time
+
++ Propogation delay -> Propagation delay of a gate or cell is the time it takes for a signal at the input pin to affect the output signal at output pin. 
+ For any gate propagation delay is measured between 50% of input transition to the corresponding 50% of output transition.
+   > Propagation delay=time(out_fall_thr)-time(in_fall_thr)
+   > Propagation delay=time(out_rise_thr)-time(in_rise_thr)
+   > Negative delay is not expected , negative dlay indicates poor choice of threshold points.
++ Transition time -> Transition delay or slew is defined as the time taken by signal to rise from 10 %( 20%) to the 90 %( 80%) of its maximum value.
+  > Rise time transition  = time(slew_high_rise_thr) - time (slew_low_rise_thr)
+  > Fall  time transition  = time(slew_high_fall_thr) - time (slew_low_fall_thr)
+
+# DAY3
+
+<summary>DAY 3 Design library cell using Magic Layout and ngspice characterization</summary>
+
+</details> <details>
+<summary>Labs for CMOS inverter ngspice simulations</summary>
+
+## Placer revision
+> 4 Stratergies are supported by IO placer.
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/4456ad1f-49bf-4b36-9b44-892bcffdee0f)
+> we can change the floorplan
+
+## SPICE deck creation for CMOS inverter
+ + To simulate standard cells we need to create spice deck for complete netlist
+  1) component connectivity
+  2) component values
+  3) Identify nodes
+  4) Name nodes
+
++ Spice deck is shown in below picture
+     ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c3ce06c5-435b-4960-9d65-8b1dbd2523fa)
+
+ ## SPICE simulation lab for CMOS inverter
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/6787d554-16c5-4f1d-b0f3-2cff3d0c24fa)
+
+## Switching Threshold
+> CMOS is robust device
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/11104bbd-1569-4273-87ef-d4d80b40eac6)
++ switching threshold is a point wherre vin=vout
++ At the intersection both PMOS and NMOS are in saturation
+  
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/01e39412-2e3a-42d9-a3af-ad6c4c09d930)
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/916d9dcb-e137-48ae-b276-fb25f60986a6)
+
+## Static and dynamic simulation of CMOS inverter
+> In dynamic simulation we provide pulse input and simulation is trasient analysis
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/6e2374de-5f25-468e-b931-32a1599a0caf)
+
+> Rise delay -> 1.1667277-1.0146
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/de5904c9-1259-4e80-b7e8-922bfca93edc)
+
+> fall delay -> 2.07653-2.00486 
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/8dd1c6f2-b172-41e8-a919-496927c2fe46)
+
+## Lab steps to git clone vsdstdcelldesign
+Use the below url to clone
+> https://github.com/nickson-jose/vsdstdcelldesign.git
+> git glone https://github.com/nickson-jose/vsdstdcelldesign.git
+> ![Screenshot 2023-09-16 173200](https://github.com/pavithra7369/pes_pd/assets/143084423/097eac3f-3a9e-47ba-b3d0-457fa228625e)
+
+</details> <details>
+<summary>Inception of Layout A CMOS fabrication process</summary>
+ 
+## 16 Mask process
+## Create Active regions
+1) Selecting a substrate
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e2205b8d-657c-4ae5-aa98-343bb1e60ead)
+
+2) Create active region for transistors
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/af09f229-3476-478f-ac38-283511a141cb)
+## Formation of N-well and P-well
+3) N-well and P-well formation
+   > N well is created for PMOS andd P well is created for NMOS
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/594ed881-1269-4d7f-8fe3-547e9446490b)
+## Formation of gate terminal
+4) Formation of gate
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d590668e-9059-40e3-820a-ac27cbccdbbc)
+## Lightly doped drain (LDD) formation
+5)Lightly doped drain (LDD) formation
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/258cd0d0-590a-4c77-8f1e-4b1d4f12c89e)
+## Source and Drain formation
+6) Source and drain formation
+   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/675f3c09-3b76-403d-9a30-4ea762cde5a2)
+## Local interconnect formation
+7) Local interconnect formation
+   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/48234735-86a7-4c91-83b2-544a299dc164)
+## Higher level metal formation
+8) Higher level metal formation
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d8462cd4-3569-431c-9ea7-f7ec5b1455c7)
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/9e48103f-f022-494d-b423-cc8adf7038c0)
+
+
