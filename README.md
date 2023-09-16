@@ -544,7 +544,7 @@ To calculate flop ratio
   > Fall  time transition  = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
 # DAY3
-
+</details><details>
 <summary>DAY 3 Design library cell using Magic Layout and ngspice characterization</summary>
 
 </details> <details>
@@ -591,7 +591,11 @@ To calculate flop ratio
 ## Lab steps to git clone vsdstdcelldesign
 Use the below url to clone
 > https://github.com/nickson-jose/vsdstdcelldesign.git
+
 > git glone https://github.com/nickson-jose/vsdstdcelldesign.git
+Command
+> magic -T sky130A.tech sky130_inv.mag &
+
 > ![Screenshot 2023-09-16 173200](https://github.com/pavithra7369/pes_pd/assets/143084423/097eac3f-3a9e-47ba-b3d0-457fa228625e)
 
 </details> <details>
@@ -625,4 +629,96 @@ Use the below url to clone
   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d8462cd4-3569-431c-9ea7-f7ec5b1455c7)
  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/9e48103f-f022-494d-b423-cc8adf7038c0)
 
+## SKY_L8 - Lab introduction to Sky130 basic layers layout and LEF using inverter
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/8c04ebfa-dd14-4a2e-8f05-b8306865d3ed)
+DRC Errors
+> To check for errors, go to DRC and click on 'DRC Find next error'
+> To know what the error is actually,it will be presnt in the tkcon window
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e9446041-2205-4ff3-a848-2713c4321e8f)
 
+## Lab steps to create std cell layout and extract spice netlist
+> To extract spice command
+
+   > extract all
+   > ext2spice cthresh 0 rthresh 0
+
+![WhatsApp Image 2023-09-16 at 19 26 27](https://github.com/pavithra7369/pes_pd/assets/143084423/75526019-b416-49f2-b4ff-3fd21fdbbf8c)
+
+> Spice files
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/618f5acc-3cf4-4fcf-a3f6-b8fff2542799)
+
+</details> <details>
+<summary>Sky130 Tech File Labs</summary>
+
+## Lab steps to create final SPICE deck using Sky130 tech
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/b4f48b58-2311-4e4f-9ac6-1d09d316b850)
+
+> In the above image 'Y' represents drain, 'A' represents drain, 'VGND' represents source,'VPWR' represents substrate.
+> Scaling -> dimension*scale
+
+## Lab steps to characterize inverter using sky130 model files
+> To plot we use the command
+  > plot y vs time a
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d55d5876-9520-49ce-903b-5c771c959b5c)
+
+> Waveform
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d3e65b15-20c4-4b50-ad01-f8008a501395)
+
+> ngspice
+
+![WhatsApp Image 2023-09-16 at 19 59 58](https://github.com/pavithra7369/pes_pd/assets/143084423/e6a55ca6-1b37-4677-84b6-0cb465ca5f54)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/2981cb7e-cdb0-49e1-bc9b-2f546dd576da)
+
+##  Lab introduction to Magic tool options and DRC rules
+ Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter 
+ language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The 
+ open- source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication 
+ technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being 
+ the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow.
+ > http://opencircuitdesign.com/magic/
+
+ ## Lab introduction to Sky130 pdk's and steps to download labs
+ SKY130 pdk SKY130 is a mature 180nm-130nm hybrid technology developed by Cypress Semiconductor that has been used for many production parts. SKY130 is 
+ now available as a foundry technology through SkyWater Technology Foundry.
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/23bf15d8-0cf2-4357-9e1c-2424c85f1734)
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c92a648c-612e-4e55-9244-37f6b92f83e9)
+
+Commands to open magic
+ > magic -d XR
+
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/1dbc26b1-2950-499a-9fb5-a5f464963063)
++ To see DRC error select area and type drc why in tkcon
+  
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/21cbc77b-ab16-440c-a551-450c5b35fbd4)
+
++ To fix the error open the sky130A.tech file using a editor and search for poly.9
+  
+ ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/09df82be-3f7b-45f6-a74b-a5eedd792e68)
+
++ Now load the sky130A.tech file again and type the command drc check
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/9f616ff5-e858-4767-b5fe-85d60bef53c1)
+
++ DRC error as geometrical construct
+  
+ > Open the nwell.mag file in magic. Seletch the nwell.6 and type the commands
+
+   > cif ostyle drc
+   > cif see dnwell_shrink
+   > cif see dnwell_missing
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/fbe2e7fb-0f3e-4329-a70f-735f11548005)
+
++ Error
+  
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/16bb4f67-fd6a-4995-abf7-c1f1a5077691)
+
+> fix the error
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/2530a6d9-578b-4253-bc0f-756a039dec96)
+
++ Now save the file and run DRC check
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/6d9a886e-d943-421b-89c0-9fd47dd77101)
