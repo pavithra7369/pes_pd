@@ -311,11 +311,17 @@ How does different apps run on the chip?
      There is a preventive approach , it is to add fake antenna diode next to every cell input after placement, run the antenna checker(magic),if the checker reports a violations on the cell input pin,replace the fake diode cell by a real one.
      
    + After this process we have the SIGN OFF which has the Static timing analysis,design rule checking and Layout vs schematic.
-     
-     
-     
+     ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/7ff10e21-613c-412d-b260-4ad0e55d7324)
+   + Physical verification DRC & LVS
+     ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/87d7eb75-aad0-449b-90d5-003b93e70d0d)
+
+## Get familiar to Open-source EDA tools
+
 
 
            
-      
+# DAY 2
+
+ </details><details>
+<summary> Good floorplan vs bad floorplan and introduction to library cells </summary>
 
