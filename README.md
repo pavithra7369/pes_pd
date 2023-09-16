@@ -689,7 +689,9 @@ DRC Errors
 Commands to open magic
  > magic -d XR
 
- ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/1dbc26b1-2950-499a-9fb5-a5f464963063)
+![WhatsApp Image 2023-09-16 at 20 50 18](https://github.com/pavithra7369/pes_pd/assets/143084423/13822bc5-8521-4ac5-b7e0-a584601f110d)
+
+ 
 + To see DRC error select area and type drc why in tkcon
   
   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/21cbc77b-ab16-440c-a551-450c5b35fbd4)
