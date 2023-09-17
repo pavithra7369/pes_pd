@@ -217,11 +217,15 @@ How does different apps run on the chip?
 </details> <details>
  
 <summary> SoC design and OpenLANE </summary>
+
 + Introduction to all components of open source digital aasic design
  >  Application specific integrated circuit requires RTL designs,EDA tools and PDK data.
+
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/db56038a-ec73-4da6-84fc-f8f4123dde72)
+
  + Examples of RTL designs available are librecores.org,opencores.org,github.com
  + Examples of some EDA tools available are openROAD,Qflow,spice,openLANE etc.
+   
    ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c07c89e0-d530-4f53-9320-2a386dfb0a6c)
 
 + PDK's (process design kit)
@@ -230,6 +234,7 @@ How does different apps run on the chip?
  PDK'S is collection of files for EDA tools used to design on IC(integraed circuits)
  PDK's acts as interface between FAB and designers.
  The first open source PDK is skywater,it was released in june 30 2020.
+
 + ASIC Design flow-> objective of ASIC flow is to take design from register tranfer level(RTL) all the way down to GDSII(format used for final layout)
 
 + Simplified RTL to GDSII flow
@@ -728,3 +733,11 @@ Commands to open magic
 </details><details>
 <summary>DAY-4
 Pre-layout timing analysis and importance of good clock tree</summary>
+ 
+## Timing models using delay tables
++ LEF files contain information of input ports,output ports,power and ground port and so on..
++ Guidelines for PnR are:
+  + Input and output ports must lie on the intersection of vertical and horizontal tracks
+  + Width of the standard cell should be odd multiples of the track pitch and height should be odd multiple of vertical track pitch
++ 
+  
