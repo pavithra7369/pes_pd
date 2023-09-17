@@ -739,5 +739,53 @@ Pre-layout timing analysis and importance of good clock tree</summary>
 + Guidelines for PnR are:
   + Input and output ports must lie on the intersection of vertical and horizontal tracks
   + Width of the standard cell should be odd multiples of the track pitch and height should be odd multiple of vertical track pitch
-+ 
+  >  ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130fd_sc_hd/tracks.info
+
+![WhatsApp Image 2023-09-17 at 20 02 21](https://github.com/pavithra7369/pes_pd/assets/143084423/45af9777-cd86-4e80-8c34-db9572263e47)
+
++ Pins must align with the li1 and met1 in preferred routing directions.
+
++ The Xspacing and Yspacing in the track file
+
+![WhatsApp Image 2023-09-17 at 20 18 04](https://github.com/pavithra7369/pes_pd/assets/143084423/c5655f88-028c-46aa-b76f-9dc82b11771d)
++ Layer after setting the grid is in the below picture
+![WhatsApp Image 2023-09-17 at 20 26 26](https://github.com/pavithra7369/pes_pd/assets/143084423/f5ee832b-a573-48f2-a8ba-ed78d7a83e01)
+
+## Lab steps to Convert Magic Layout to Standard Cell LEF
+> Now layout is done,port definitions are require for extracting LEF files
++ To define ports
+    > Select the layer->Edit cell->Text
++ To Define the purpose of the port, for that we do port class and port use
+    > select the port-> set the port class and port use here
++ Convert magic layout to standard cell LEF
   
+1) In tkcon window of the 'sky130_inv.mag' file we the can change the name
+   > save sky130_vsdinv.mag
+2) To extract the LEF file type
+   > lef write
+3) type
+   > less sky130_vsdinv.lef
+  ![WhatsApp Image 2023-09-17 at 21 06 01](https://github.com/pavithra7369/pes_pd/assets/143084423/af68351c-d87b-4577-84f0-62850429d453)
+4) Plug the generated lef file into PICORV32a
+   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e83e5111-06a6-40a8-805f-700554197c3d)
+5) Copy the .mag file that we created to the 'src' folder of picorv32a folder.
+   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e325b645-feac-4a96-a7bf-7dfa5a5a0e2c)
+
+
+## Delay tables
+ A delay table lists the amount of delay as a function of one or more variables, such as input transition time and output load capacitance. From these table entries, the tool calculates each cell delay.
+
+</details><details>
+<summary>Timing analysis with ideal clocks using openSTA
+</summary>
+## Setup timing analysis and introduction to flip-flop setup time
+
+
+
+
+
+
+</details><details>
+<summary>Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+SKY130_D5_SK1 - Routing and design rule check (DRC)
+SKY_L1 - Introduction to Maze Routing Â LeeÂs algorithm </summary>summary>
