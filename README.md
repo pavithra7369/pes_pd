@@ -433,16 +433,21 @@ To calculate flop ratio
 
 + Logical cell placement blockage
   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/ae193a2c-09a1-4191-a469-a03f2308f1d5)
-  > Now floorplan is ready forr placement and routing step
+  > Now floorplan is ready for placement and routing step
 
   ## Steps to run FLoorplan using OpenLANE
   After synnthesis, open terminal and run floorplan
-  > cd floorplan
-  ![WhatsApp Image 2023-09-16 at 13 35 35](https://github.com/pavithra7369/pes_pd/assets/143084423/b93e0714-5bdd-414b-9b05-4f9ae317c04e)
+  > run_floorplan
+  ![WhatsApp Image 2023-09-18 at 23 10 30](https://github.com/pavithra7369/pes_pd/assets/143084423/0381eaf2-5018-403d-b579-8f293bffddb0)
+
+  > magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def 
+  ![WhatsApp Image 2023-09-18 at 23 19 32](https://github.com/pavithra7369/pes_pd/assets/143084423/555eac51-e527-4452-95e9-c8f91e7d3278)
   
-  ![WhatsApp Image 2023-09-16 at 13 39 53](https://github.com/pavithra7369/pes_pd/assets/143084423/6eadd80b-2848-4d29-8c8e-8e9325ef7cf1)
-  
-  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/498e7194-861d-45e5-8e51-2ff7742aa211)
+  ![WhatsApp Image 2023-09-18 at 23 15 30](https://github.com/pavithra7369/pes_pd/assets/143084423/50ef414f-1756-48e3-bccb-b59bb224208f)
+
+  ![WhatsApp Image 2023-09-18 at 23 20 31](https://github.com/pavithra7369/pes_pd/assets/143084423/f1f03ca9-0d1e-4866-8742-5a5f7b3bc6ff)
+  > To know details of a cell gtype 'what' in tkcon window
+  ![WhatsApp Image 2023-09-18 at 23 21 35](https://github.com/pavithra7369/pes_pd/assets/143084423/fee560b8-e5ad-412f-be04-fb9f023e09a5)
 
  </details><details>
   <summary>Library Binding and Placement </summary>
