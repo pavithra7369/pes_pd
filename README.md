@@ -481,12 +481,11 @@ To calculate flop ratio
   goals.
 
 + Congestion aware placement using RePlAce
-   > Placement is of 2 tyoes detailed placement and global placement
+   > Placement is of 2 types: detailed placement and global placement
    ![WhatsApp Image 2023-09-16 at 14 46 07](https://github.com/pavithra7369/pes_pd/assets/143084423/6363b009-3d30-46a2-a3ad-e9214e838f55)
    ![WhatsApp Image 2023-09-16 at 14 47 23](https://github.com/pavithra7369/pes_pd/assets/143084423/bd7f5dea-5380-45df-9beb-91a6509d32fd)
-   ![WhatsApp Image 2023-09-16 at 14 47 45](https://github.com/pavithra7369/pes_pd/assets/143084423/448568a8-e305-4d3f-87c3-1b14854c956f)
-  > on further zooming
-   ![WhatsApp Image 2023-09-16 at 14 48 21](https://github.com/pavithra7369/pes_pd/assets/143084423/6d8a15d9-ca9b-40c9-8fa4-82376c049d13)
+  > Placement of standard cells is shown below
+   ![WhatsApp Image 2023-09-18 at 23 31 19](https://github.com/pavithra7369/pes_pd/assets/143084423/591fef3e-a9e3-4b7d-916d-f0fe107502d9)
 
  </details><details>
  <summary> Cell design and characterization flows
@@ -562,7 +561,9 @@ To calculate flop ratio
 
 ## Placer revision
 > 4 Stratergies are supported by IO placer.
+
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/4456ad1f-49bf-4b36-9b44-892bcffdee0f)
+
 > we can change the floorplan
 
 ## SPICE deck creation for CMOS inverter
@@ -600,7 +601,6 @@ To calculate flop ratio
 
 ## Lab steps to git clone vsdstdcelldesign
 Use the below url to clone
-> https://github.com/nickson-jose/vsdstdcelldesign.git
 
 > git glone https://github.com/nickson-jose/vsdstdcelldesign.git
 Command
@@ -614,7 +614,8 @@ Command
 ## 16 Mask process
 ## Create Active regions
 1) Selecting a substrate
- ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e2205b8d-657c-4ae5-aa98-343bb1e60ead)
+   
+   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e2205b8d-657c-4ae5-aa98-343bb1e60ead)
 
 2) Create active region for transistors
  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/af09f229-3476-478f-ac38-283511a141cb)
@@ -653,10 +654,11 @@ DRC Errors
    > ext2spice cthresh 0 rthresh 0
 
 ![WhatsApp Image 2023-09-16 at 19 26 27](https://github.com/pavithra7369/pes_pd/assets/143084423/75526019-b416-49f2-b4ff-3fd21fdbbf8c)
+> we use pex file to create spice files
+> vim sky130_fd_sc_hd
+> edit the file
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/f61ae971-eec0-456f-86ab-8d1fc8a09bd1)
 
-> Spice files
-
-![image](https://github.com/pavithra7369/pes_pd/assets/143084423/618f5acc-3cf4-4fcf-a3f6-b8fff2542799)
 
 </details> <details>
 <summary>Sky130 Tech File Labs</summary>
@@ -693,11 +695,14 @@ DRC Errors
  ## Lab introduction to Sky130 pdk's and steps to download labs
  SKY130 pdk SKY130 is a mature 180nm-130nm hybrid technology developed by Cypress Semiconductor that has been used for many production parts. SKY130 is 
  now available as a foundry technology through SkyWater Technology Foundry.
+ > wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+ > tar xfz drc_tests.tgz
+ > cd drc_tests
+ > > magic -d XR
  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/23bf15d8-0cf2-4357-9e1c-2424c85f1734)
  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c92a648c-612e-4e55-9244-37f6b92f83e9)
 
-Commands to open magic
- > magic -d XR
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/4f7ef806-1785-4187-8a2c-7739751ac786)
 
 ![WhatsApp Image 2023-09-16 at 20 50 18](https://github.com/pavithra7369/pes_pd/assets/143084423/13822bc5-8521-4ac5-b7e0-a584601f110d)
 
