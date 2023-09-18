@@ -775,9 +775,9 @@ Pre-layout timing analysis and importance of good clock tree</summary>
    > lef write
 3) type
    > less sky130_vsdinv.lef
+   
   ![WhatsApp Image 2023-09-17 at 21 06 01](https://github.com/pavithra7369/pes_pd/assets/143084423/af68351c-d87b-4577-84f0-62850429d453)
-4) Plug the generated lef file into PICORV32a
-   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e83e5111-06a6-40a8-805f-700554197c3d)
+
 5) Copy the .mag file that we created to the 'src' folder of picorv32a folder.
    ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e325b645-feac-4a96-a7bf-7dfa5a5a0e2c)
 
