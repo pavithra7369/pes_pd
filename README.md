@@ -670,21 +670,21 @@ DRC Errors
 > Scaling -> dimension*scale
 
 ## Lab steps to characterize inverter using sky130 model files
-> To plot we use the command
-  > plot y vs time a
 
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d55d5876-9520-49ce-903b-5c771c959b5c)
 
-> Waveform
-
-![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d3e65b15-20c4-4b50-ad01-f8008a501395)
-
 > ngspice
 
-![WhatsApp Image 2023-09-16 at 19 59 58](https://github.com/pavithra7369/pes_pd/assets/143084423/e6a55ca6-1b37-4677-84b6-0cb465ca5f54)
-![image](https://github.com/pavithra7369/pes_pd/assets/143084423/2981cb7e-cdb0-49e1-bc9b-2f546dd576da)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/a7ac530c-c1d7-4fea-aac6-624594e4fc2c)
+
+> Plot
+  > To plot we use the command
+  > plot y vs time a
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/f32d30db-d0fb-461e-ac73-f8707a288407)
+
 
 ##  Lab introduction to Magic tool options and DRC rules
+
  Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter 
  language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The 
  open- source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication 
@@ -699,8 +699,8 @@ DRC Errors
  > tar xfz drc_tests.tgz
  > cd drc_tests
  > > magic -d XR
- ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/23bf15d8-0cf2-4357-9e1c-2424c85f1734)
- ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c92a648c-612e-4e55-9244-37f6b92f83e9)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/23bf15d8-0cf2-4357-9e1c-2424c85f1734)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c92a648c-612e-4e55-9244-37f6b92f83e9)
 
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/4f7ef806-1785-4187-8a2c-7739751ac786)
 
@@ -709,14 +709,13 @@ DRC Errors
  
 + To see DRC error select area and type drc why in tkcon
   
-  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/21cbc77b-ab16-440c-a551-450c5b35fbd4)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/21cbc77b-ab16-440c-a551-450c5b35fbd4)
 
 + To fix the error open the sky130A.tech file using a editor and search for poly.9
   
- ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/09df82be-3f7b-45f6-a74b-a5eedd792e68)
-
 + Now load the sky130A.tech file again and type the command drc check
-  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/9f616ff5-e858-4767-b5fe-85d60bef53c1)
+  
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/9f616ff5-e858-4767-b5fe-85d60bef53c1)
 
 + DRC error as geometrical construct
   
