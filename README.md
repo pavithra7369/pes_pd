@@ -154,24 +154,27 @@ Good floorplan vs bad floorplan and introduction to library cells
     + TritonRoute method to handle connectivity
     + Routing topology algorithm and final files list post-route
 
-# DAY 1  Inception of open-source EDA, OpenLANE and Sky130 PDK
+ 
 
 </details><details>
-<summary> How to talk to computers </summary>
+<summary>DAY 1  Inception of open-source EDA, OpenLANE and Sky130 PDK:
+ How to talk to computers </summary>
  
 
 Introduction to QFN-48 package,Chips,Pads,Core,Die,and IP's
 
 Here we are taking aurdino board, we are discussing about the circled chip in the below picture
-   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/eb1d857d-55ba-43ca-9dff-0ac52a8c3ff4)
-   > Block diagram of aurdino board
-   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/cea47917-f860-4539-ba2a-fd8b8273ce09)
-  >  Te chip design of package QFN-48(Quad flat No-leads) is shown below
-   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/75264392-6050-4707-8999-2ab890f94965)
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/eb1d857d-55ba-43ca-9dff-0ac52a8c3ff4)
 
-  > Wire bounds are used to connect the pins to the boundaries of chip,this is how transfer signals from outside world enter into the interior of chip.
+> Block diagram of aurdino board
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/cea47917-f860-4539-ba2a-fd8b8273ce09)
 
-  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/667b709c-0df0-4346-bf56-a8f8e004e14b)
+>  Te chip design of package QFN-48(Quad flat No-leads) is shown below
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/75264392-6050-4707-8999-2ab890f94965)
+
+> Wire bounds are used to connect the pins to the boundaries of chip,this is how transfer signals from outside world enter into the interior of chip.
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/667b709c-0df0-4346-bf56-a8f8e004e14b)
 
 > Pads -> We can send signals from pins through pads(signals enter and leave the chip through pads)
 
@@ -219,14 +222,14 @@ How does different apps run on the chip?
 <summary> SoC design and OpenLANE </summary>
 
 + Introduction to all components of open source digital aasic design
- >  Application specific integrated circuit requires RTL designs,EDA tools and PDK data.
+>  Application specific integrated circuit requires RTL designs,EDA tools and PDK data.
 
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/db56038a-ec73-4da6-84fc-f8f4123dde72)
 
  + Examples of RTL designs available are librecores.org,opencores.org,github.com
  + Examples of some EDA tools available are openROAD,Qflow,spice,openLANE etc.
-   
-   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c07c89e0-d530-4f53-9320-2a386dfb0a6c)
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/c07c89e0-d530-4f53-9320-2a386dfb0a6c)
 
 + PDK's (process design kit)
   A process design kit (PDK) is a set of files used within the semiconductor industry to model a fabrication process for the design tools used to design 
@@ -240,6 +243,7 @@ How does different apps run on the chip?
 + Simplified RTL to GDSII flow
   
   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/ca2b811c-7c68-4706-a7a5-b5a6f61732e2)
+  
   1) Synthesis
     + Design is illustrated in circuits made out of components in standard cell libraries
       ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/cc493485-09ef-48af-9434-da53138fcb74)
@@ -374,11 +378,9 @@ To calculate flop ratio
 + 17323 is the Number of cells
 + (1634/17323) ->0.094 This is the flop ratio 
 
+ 
  </details><details>
-<summary>  DAY 2 Good floorplan vs bad floorplan and introduction to library cells </summary>
-
- </details><details>
-<summary> Chip Floor planning considerations </summary>
+<summary> DAY 2 Good floorplan vs bad floorplan and introduction to library cells: Chip Floor planning considerations </summary>
   
   ## Utilization factor and aspect ratio
     
@@ -473,7 +475,8 @@ To calculate flop ratio
      > The distance between each cell is calculated by slew/ transition
      ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/d5080495-b715-42de-92de-718afb6df1d2)
      > Logic is optimized based on placement conditions
- 4) STA (static timing analysis
+ 4) STA (static timing analysis)
+     > Static Timing Analysis can be done only for Register-Transfer-Logic (RTL) designs. Functionality of the design must be cleared before the design is subjected to STA.
       
 +  Library characterization and modelling
   Libraries provide standardized building blocks that enhance design productivity and reusability, while characterization provides the essential data 
@@ -552,12 +555,11 @@ To calculate flop ratio
   > Rise time transition  = time(slew_high_rise_thr) - time (slew_low_rise_thr)
   > Fall  time transition  = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
-# DAY3
-</details><details>
-<summary>DAY 3 Design library cell using Magic Layout and ngspice characterization</summary>
+
 
 </details> <details>
-<summary>Labs for CMOS inverter ngspice simulations</summary>
+<summary>DAY 3 Design library cell using Magic Layout and ngspice characterization: 
+ Labs for CMOS inverter ngspice simulations</summary>
 
 ## Placer revision
 > 4 Stratergies are supported by IO placer.
