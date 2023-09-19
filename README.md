@@ -780,21 +780,72 @@ Pre-layout timing analysis and importance of good clock tree</summary>
 5) Copy the .mag file that we created to the 'src' folder of picorv32a folder.
    ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/e325b645-feac-4a96-a7bf-7dfa5a5a0e2c)
 
++ Modify the contents
+  ![WhatsApp Image 2023-09-19 at 09 29 19](https://github.com/pavithra7369/pes_pd/assets/143084423/84b74d16-307d-4b4f-b15c-09f1dd06133a)
+
++ now in openlane type the following commmands
+  > prep -design picorv32a -tag 18-09_05-15 -overwrite
+  > set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+  > add_lefs -src $lefs
+  
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/bc538420-5650-4ecd-8f74-9661f05591a2)
+
+  > run_synthesis
+  ![WhatsApp Image 2023-09-19 at 09 33 48](https://github.com/pavithra7369/pes_pd/assets/143084423/809552f7-dbef-4b6b-a865-786a5f21e835)
+  > run_floorplan
+  > run_placement
+  > magic -T 
+  ![WhatsApp Image 2023-09-19 at 09 24 39](https://github.com/pavithra7369/pes_pd/assets/143084423/b2d14e91-7f8e-4990-8a82-e87745b506be)
+  ![WhatsApp Image 2023-09-19 at 09 24 55](https://github.com/pavithra7369/pes_pd/assets/143084423/d6bc8511-5307-4551-8284-3d6e22d0a303)
+  ![WhatsApp Image 2023-09-19 at 09 37 52](https://github.com/pavithra7369/pes_pd/assets/143084423/42390143-4039-42dc-8c4d-cd5ad246c35f)
 
 ## Delay tables
  A delay table lists the amount of delay as a function of one or more variables, such as input transition time and output load capacitance. From these table entries, the tool calculates each cell delay.
-
++ Delay tables purpose is represent the delays encountered by signals as they pass through various components of a digital circuit.
++ Components of Delay Tables are Input Conditions,Gate Delay,Interconnect Delay,Output Loads
 </details><details>
 <summary>Timing analysis with ideal clocks using openSTA
 </summary>
 ## Setup timing analysis and introduction to flip-flop setup time
+ + Setup time is the minimum amount of time the data signal should be held steady before the clock event so that the data are reliably sampled by the clock. This applies to synchronous circuits such as 
+  the flip-flop.
++ The setup time (Ts) for a flip-flop determines when a data input signal must be stable before the arrival of the clock edge 
+
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/87abec98-59b4-47d7-83f4-fe89b52db872)
+
+## Introduction to clock jitter and uncertainty
++ Clock Jitter-> Clock jitter is the variation of a clock signal's frequency or period. Either measurement carries the same information, but the period measurement is a simple time interval measurement easily performed using a real-time oscilloscope.
++ Clock Uncertainty-> The uncertainty of the clock is known as clock_uncertainty. For setup checks, you subtract the uncertainty from the clock period and add hold. If you were adding to the data path for setup, the resultant timing number is the same.
+
+## Clock Tree Synthesis
+
+command 
+>run_cts
+![WhatsApp Image 2023-09-19 at 09 47 20](https://github.com/pavithra7369/pes_pd/assets/143084423/b3905059-7cb0-47d8-ac1d-6ede1224c987)
+![WhatsApp Image 2023-09-19 at 09 47 20](https://github.com/pavithra7369/pes_pd/assets/143084423/09a87a64-5d2e-4af1-89d7-df978d4d55b3)
 
 
-
-
-
+## Clock Tree Synthesis TritonCTS and Signal Integrity
+Post CTS- STA Analysis->OpenSTA is an open-source static timing analysis tool that is commonly used in digital circuit design.
+In the openlane window type
+> openroad
+![image](https://github.com/pavithra7369/pes_pd/assets/143084423/3d672faf-9159-4a3c-8295-a48b494809a1)
 
 </details><details>
 <summary>Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
-SKY130_D5_SK1 - Routing and design rule check (DRC)
-SKY_L1 - Introduction to Maze Routing Â LeeÂs algorithm </summary>summary>
+  </summary>summary>
+  Power Distribution Network and Routing
+  > gen_pdn
+  ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/8d0f1ad6-5492-47ce-9594-b84c63fd027e)
+
+  > run_routing
+
+
+  ## SPEF Extraction
+  SPEF is extracted after routing in Place and route stage. This helps in the accurate calculation of IR-drop analysis and other analysis after routing. This file contains the R and C parameters 
+  depending on the placement of a tile/block and the routing among the placed cells.
+  > cd Desktop/work/tools/SPEF_Extractor
+  >python3 /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-09_19- 
+ 58/tmp/merged/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-09_19-58/results/routing/picorv32a.def
+  > Spef extracted is created, path is given below
+ > /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-09_06-26/results/routing/
