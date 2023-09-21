@@ -815,6 +815,9 @@ Pre-layout timing analysis and importance of good clock tree</summary>
 
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/87abec98-59b4-47d7-83f4-fe89b52db872)
 
+sky_Vsdinv
+![WhatsApp Image 2023-09-19 at 09 24 53](https://github.com/pavithra7369/pes_pd/assets/143084423/024ec1c4-27f6-4fcd-a21a-180a39c1dffc)
+
 ## Introduction to clock jitter and uncertainty
 + Clock Jitter-> Clock jitter is the variation of a clock signal's frequency or period. Either measurement carries the same information, but the period measurement is a simple time interval measurement easily performed using a real-time oscilloscope.
 + Clock Uncertainty-> The uncertainty of the clock is known as clock_uncertainty. For setup checks, you subtract the uncertainty from the clock period and add hold. If you were adding to the data path for setup, the resultant timing number is the same.
