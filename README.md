@@ -815,8 +815,9 @@ Pre-layout timing analysis and importance of good clock tree</summary>
 
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/87abec98-59b4-47d7-83f4-fe89b52db872)
 
+
 sky_Vsdinv
-![image](https://github.com/pavithra7369/pes_pd/assets/143084423/80de89a5-cafa-4d82-a0ba-48bbd971e502)
+![WhatsApp Image 2023-09-23 at 07 27 00](https://github.com/pavithra7369/pes_pd/assets/143084423/6f79b01b-83f9-4dd2-997e-be32eb3425f6)
 
 
 ## Introduction to clock jitter and uncertainty
