@@ -836,6 +836,7 @@ command
 Post CTS- STA Analysis->OpenSTA is an open-source static timing analysis tool that is commonly used in digital circuit design.
 In the openlane window type
 > openroad
+
 ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/3d672faf-9159-4a3c-8295-a48b494809a1)
 
 </details><details>
@@ -843,6 +844,7 @@ In the openlane window type
   </summary>summary>
   Power Distribution Network and Routing
   > gen_pdn
+
   ![image](https://github.com/pavithra7369/pes_pd/assets/143084423/8d0f1ad6-5492-47ce-9594-b84c63fd027e)
 
   > run_routing
